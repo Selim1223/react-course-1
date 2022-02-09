@@ -64,6 +64,22 @@ export default function Home() {
     window.localStorage.setItem("dataKanban", JSON.stringify(newState));
   };
 
+  // const completedCard = (index, listId) => {
+  //   const list = data.lists[listId];
+
+  //   list.cards.title.style.textDecoration="line-through";
+
+  //   const newState = {
+  //     ...data,
+  //     lists: {
+  //       ...data.lists,
+  //       [listId]: list,
+  //     },
+  //   };
+  //   setData(newState);
+  //   window.localStorage.setItem("dataKanban", JSON.stringify(newState));
+  // };
+
   const updateCardTitle = (title, index, listId) => {
     const list = data.lists[listId];
     list.cards[index].title = title;
@@ -199,6 +215,7 @@ export default function Home() {
         addMoreList,
         updateListTitle,
         removeCard,
+        // completedCard,
         updateCardTitle,
         deleteList
       }}

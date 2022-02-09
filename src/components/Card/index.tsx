@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 
 import TextareaAutosize from "react-textarea-autosize";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import CheckIcon from '@mui/icons-material/Check';
 import { Draggable } from "react-beautiful-dnd";
 
 import storeApi from "../../utils/storeApi";
@@ -19,7 +20,7 @@ interface CardElement{
 export default function Card({ card, index, listId }: CardElement) {
   const [open, setOpen] = useState(false);
   const [newTitle, setNewTitle] = useState(card.title);
-  const { removeCard, updateCardTitle } = useContext(storeApi);
+  const { removeCard, /*completedCard*/updateCardTitle } = useContext(storeApi);
 
   const handleOnBlur = () => {
     updateCardTitle(newTitle, index, listId);
@@ -56,6 +57,14 @@ export default function Card({ card, index, listId }: CardElement) {
               >
                 <p>{card.title}</p>
                
+                <button
+                  onClick={() => {
+                  card.style.textDecoration="line-through";
+                  }}
+                >
+                  <CheckIcon />  
+                </button>
+
                 <button
                   onClick={() => {
                     removeCard(index, listId);
