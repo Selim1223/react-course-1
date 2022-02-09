@@ -1,0 +1,10 @@
+npm install react-beautiful-dnd --save
+
+npm install react-textarea-autosize
+
+npm install @mui/icons-material
+
+npm install @mui/material @emotion/react @emotion/styled
+
+npm i --save-dev @types/react-beautiful-dnd
+

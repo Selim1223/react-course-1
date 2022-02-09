@@ -1,3 +1,19 @@
-import React from 'react';
+import React from "react";
+import Navbar from "./components/Navbar";
 
-export default () => <div className="App">React Course 1</div>;
+import Home from "./Home";
+
+
+import "./index.css";
+
+
+
+export default function App() {
+ 
+  return (
+    <div>  
+      <Navbar/>
+      <Home/>
+    </div>
+  );
+}
