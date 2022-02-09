@@ -2,6 +2,8 @@
 
 ZOUACHE Sélim
 
+j'ai essayé de faire sans les any, malheureusement je n'ai pas réussi, néanmoins j'ai laissé les phases de recherches/tests que j'ai pu faire en commentaire
+
 ## Getting started
 
 - Fork project to your personal repo
